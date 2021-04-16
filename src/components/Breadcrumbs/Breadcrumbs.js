@@ -1,7 +1,7 @@
 import React from 'react';
 import styled from 'styled-components/macro';
 
-import { COLORS } from '../../constants';
+import { COLORS, WEIGHTS } from '../../constants';
 
 const Breadcrumbs = ({ children }) => {
   return <Wrapper>{children}</Wrapper>;
@@ -32,6 +32,7 @@ const CrumbWrapper = styled.div`
 const CrumbLink = styled.a`
   color: ${COLORS.gray[700]};
   text-decoration: none;
+  font-weight: ${WEIGHTS.normal};
 
   &:hover {
     color: ${COLORS.gray[900]};
