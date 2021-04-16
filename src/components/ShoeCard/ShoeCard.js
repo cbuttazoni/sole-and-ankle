@@ -37,21 +37,18 @@ const ShoeCard = ({
       "--textDecorationPrize": "line-through",
       "--backgroundColorFlag": COLORS.primary,
       "--showFlag": "visible",
-      "--contentFlag": "Sale",
     },
     "new-release": {
       "--showSalesPrize": "hidden",
       "--textDecorationPrize": "inherit",
       "--backgroundColorFlag": COLORS.secondary,
       "--showFlag": "visible",
-      "--contentFlag": "Just Released!",
     },
     default: {
       "--showSalesPrize": "hidden",
       "--textDecorationPrize": "inherit",
       "--backgroundColorFlag": COLORS.primary,
       "--showFlag": "hidden",
-      "--contentFlag": "",
     },
   }
   const styles = STYLES[variant]
@@ -95,7 +92,6 @@ const Link = styled.a`
 `
 
 const Wrapper = styled.article`
-  width: 340px;
 `
 
 const ImageWrapper = styled.div`
@@ -140,14 +136,13 @@ const Flag = styled.div`
   top: 12px;
   right: -4px;
   height: 32px;
-  width: fit-content;
   background-color: var(--backgroundColorFlag);
-  content: var(--contentFlag);
   border-radius: 2px;
-  padding: 7px 9px 9px 11px;
-  font-weight: ${WEIGHTS.medium};
+  padding: 0 10px;
+  font-size: 14px;
+  font-weight: ${WEIGHTS.bold};
   color: ${COLORS.white};
-  line-height: initial;
+  line-height: 32px;
   visibility: var(--showFlag);
 `
 
